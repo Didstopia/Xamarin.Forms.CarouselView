@@ -222,6 +222,9 @@ namespace Xamarin.Forms.Platform
 
 				// initialize properties
 				_position = Element.Position;
+				
+				// reload initial position
+				_controller.ReloadData(_position);
 
 				// hook up crud events
 				((ICarouselViewController)newElement).CollectionChanged += OnCollectionChanged;
